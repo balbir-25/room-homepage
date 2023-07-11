@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 1em;
+    box-sizing: border-box;
+  }
+  
+  body {
+    min-height: 100vh;
+    min-width: 1340px;
+    align-items: center;
+    font-family: "League Spartan";
+    font-size: 1rem;
+  }
+
+  /* START MAIN AREA */
+
+  #site{
+    position: relative;
+  }
+
+  /* HEADER AREA */
+
+  #three, #two{
+    display: none;
+  }
+
+  .header{
+    display: grid;
+    grid-template-columns: 60% 40%;
+  }
+
+  .nav-img{
+   height: 500px;
+   background-size: contain;
+   background-repeat: no-repeat;
+  }
+
+  .nav1{
+      background: url(./images/desktop-image-hero-1.jpg);
+      height: 500px;
+      background-size:contain;
+      background-repeat: no-repeat;
+  }
+
+  .nav2{
+    background: url(./images/desktop-image-hero-2.jpg);
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .nav3{
+    background: url(./images/desktop-image-hero-3.jpg);
+    height: 500px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  #bar{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    padding: 2rem ;
+    align-items: center;
+  }
+
+  #ham{
+    display: none;
+  }
+
+  .logo{
+    width: fit-content;
+    height: fit-content;
+  }
+
+  #bar-ul{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    list-style: none;
+  }
+
+  .bar-li{
+    font-weight: 500;
+    color: hsl(0, 0%, 100%);
+    cursor: pointer;
+  }
+
+  .bar-li:hover{
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
+  }
+
+  .head-info{
+    margin-top: 5rem;
+    margin-left: 3.5rem;
+  }
+
+  .head-h1{
+    font-weight: 700;
+    font-size: 2.5rem;
+    width: 350px;
+    color: black;
+  }
+
+  .head-para{
+    font-weight: 600;
+    margin-top: 2rem;
+    width: 430px;
+    color: hsl(0, 0%, 63%);
+  }
+
+  .info-span{
+    font-weight: 500;
+    margin-top: 2rem;
+    color: black;
+    display: inline-block;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .info-span:hover{
+    color: hsl(0, 0%, 63%);
+  }
+
+  .icon{
+ right:412px;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  width: 150px;
+  position: absolute;
+  top: 444px;
+  }
+
+  .icon img{
+    background-color: black;
+    padding: 1rem 2rem;
+  }
+
+  .icon img:hover{
+    background-color: hsl(0, 0%, 27%);
+  }
+
+  /* ABOUT AREA */
+  
+  #about{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .about-info{
+    padding: 2rem 1rem;
+  }
+
+  .about-h2{
+    margin-top: 2rem;
+    letter-spacing: 5px;
+    color: black;
+    text-transform: uppercase;
+  }
+
+  .about-para{
+    margin-top: 2rem;
+    color: hsl(0, 0%, 63%);
+    line-height: 1.5rem;
+  }
+
+  /* END MAIN AREA */
+
+  /* START FOOTER  AREA */
+.foot {
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 20px;
+    color: hsl(0, 100%, 67%);
+    background-color: hsl(240, 10%, 16%);
+  }
+  
+  .foot a {
+    text-decoration: none;
+    color: hsl(39, 100%, 56%);
+  }
+  
+  .foot a:hover {
+    color: hsl(300, 69%, 71%);
+  }
+  /* END FOOTER  AREA */
+
+  /* START MEDIA QUERY */
+  @media screen and (max-width : 375px) {
+    body{
+        min-width: 375px;
+    }
+
+    .header{
+        grid-template-columns: 1fr;
+    }
+
+
+    .nav1{
+        background:url(./images/mobile-image-hero-1.jpg) ;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 360px;
+    }
+
+    .nav2{
+        background: url(./images/mobile-image-hero-2.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 360px;
+    }
+
+    .nav3{
+        background: url(./images/mobile-image-hero-3.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 360px;
+    }
+
+    #bar{
+        padding: 2rem 1rem;
+        gap: 1rem;
+    }
+
+    .head-info{
+        margin-left: 1rem;
+        margin-top: 2rem;
+    }
+
+    .head-para{
+        width: 350px;
+    }
+
+    #about{
+        flex-direction: column;
+    }
+
+   
+  .overlay {
+    position: fixed;
+    z-index: 2;
+    top: 0rem;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    backdrop-filter: blur(6px);
+    transition: 0.3s;
+  }
+
+  #ham {
+    display: grid;
+    padding: 1rem;
+    background: transparent;
+    border: none;
+  }
+
+  #ham img:last-child {
+    display: none;
+  }
+
+  body.open #ham img:first-child {
+    display: none;
+  }
+
+  body.open #ham img:last-child {
+    display: block;
+    z-index: 3;
+  }
+
+  body.open .overlay {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  #bar-ul {
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    flex-direction: row;
+    top: 0rem;
+    width: 375px;
+    height: 100px;
+    padding: 1rem;
+    background: white;
+    translate: -200% 0;
+    transition: 0.5s;
+    text-align: start;
+    left: 0rem;
+    gap: 1rem;
+    padding-top: 3rem;
+    padding-left: 5rem;
+  }
+
+  body.open #bar-ul {
+    translate: 0;
+  }
+
+  .bar-li{
+    color: black;
+  }
+
+  .icon{
+    right: 2px;
+    top: 303px;
+  }
+
+  }
+  /* END MEDIA QUERY */
